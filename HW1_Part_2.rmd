@@ -1,0 +1,11 @@
+---
+title: "Part2_model_selection"
+author: "Donghyun Kang"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
