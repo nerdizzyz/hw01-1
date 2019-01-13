@@ -1,5 +1,5 @@
 ---
-title: "Part2 Model Selection"
+title: "Part 2 Model Selection"
 author: "Donghyun Kang"
 output: pdf_document
 ---
