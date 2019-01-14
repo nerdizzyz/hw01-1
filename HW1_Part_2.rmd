@@ -1,7 +1,11 @@
 ---
 title: "Part 2 Model Selection"
 author: "Donghyun Kang"
-output: pdf_document
+output:
+  pdf_document:
+    fig_width: 5
+    fig_height: 6
+    fig_caption: False
 ---
 
 ## 1. For each part, indicate whether we would generally expect the performance of a flexible statistical learning method to be better or worse than an inflexible method. Justify your answer.
@@ -25,7 +29,7 @@ output: pdf_document
 
 ## 2. Bias-variance decomposition
 
-![](./figure.png){width=450px}
+![](./figure.png)
 
   * The **training MSE** monotonically decrease as model flexibility increases because the model will fit more closely to the observed data with more flexibility.
 
@@ -40,7 +44,7 @@ output: pdf_document
   
 ## 3. Producing a graph
 
-```{r warning = F, message = F, echo = F}
+```{r warning = F, message = F, fig.width = 6, fig.height= 4}
 library(ggplot2)
 library(tidyverse)
 theme_set(theme_minimal())
@@ -74,7 +78,7 @@ df <- df %>%
 #draw the graph
 graph <- ggplot() + geom_point(aes(x = x1, y = x2, color = class), 
                                shape = 1, size = 2, data = df) +
-  geom_point(data = grid, aes(x = x, y = y, color = class), size = 0.5, alpha = 0.3) + 
+  geom_point(data = grid, aes(x = x, y = y, color = class), size = 1, alpha = 0.3) + 
   ggtitle("The result of classification with 200 simulated data") 
 
 graph
